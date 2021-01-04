@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const InputText: React.FC = () => {
-  const [name, setName] = useState('');
-
-  return (
-    <>
-      Name:
-      <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
-    </>
-  );
+type Props = {
+  name: string;
+  handleOnChange: (name: string) => void
 };
+
+const InputText: React.FC<Props> = ({ name, handleOnChange }) => (
+  <>
+    Name:
+    <input type="text" value={name} onChange={(e) => handleOnChange(e.target.value)} />
+  </>
+);
 
 export default InputText;
