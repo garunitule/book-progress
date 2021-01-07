@@ -1,16 +1,16 @@
 import React from 'react';
 import BookItem from './BookItem';
 
-export type list = {
+export type bookList = {
   id: number;
   name: string;
 };
 
 type Props = {
-  itemList: list[];
+  itemList: bookList[];
 };
 
-const List: React.FC<Props> = ({ itemList }) => {
+const BookList: React.FC<Props> = ({ itemList }) => {
   const items = itemList.map((book) => <BookItem name={book.name} key={book.id} />);
 
   return (
@@ -20,4 +20,4 @@ const List: React.FC<Props> = ({ itemList }) => {
   );
 };
 
-export default List;
+export default BookList;
