@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import ClickButton from './Components/ClickButton';
-import BookList, { bookList } from './Books/BookList';
+import { bookList } from './Books/BookList';
 import InputText from './Components/InputText';
 import StateList from './BookStates/StateList';
 
@@ -38,7 +38,6 @@ const App: React.FC = () => {
         handleOnChange={handleOnChange}
       />
       <ClickButton text="保存" handleOnClick={handleOnClick} />
-      <BookList itemList={books} />
       <StateList books={books} />
     </div>
   );
