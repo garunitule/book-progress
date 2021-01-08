@@ -44,6 +44,11 @@ const App: React.FC = () => {
       name: 'vue入門',
       state: secondState,
     },
+    {
+      id: 3,
+      name: 'Angular入門',
+      state: initState,
+    },
   ]);
 
   const [name, setName] = useState<string>('');

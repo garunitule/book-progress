@@ -1,5 +1,5 @@
 import React from 'react';
-import { List } from 'semantic-ui-react';
+import { Grid } from 'semantic-ui-react';
 import State from './State';
 import { bookList } from '../Books/BookList';
 import { bookState } from '../Books/BookItem';
@@ -11,21 +11,21 @@ type Props = {
 
 const StateList: React.FC<Props> = ({ books, states }) => {
   const bookStates = states.map((state) => (
-    <List.Item key={state.name}>
-      <p>{state.name}</p>
-      <List.Content>
-        <State
-          books={books.filter((book) => book.state.name === state.name)}
-        />
-      </List.Content>
-    </List.Item>
+    <Grid.Column key={state.name}>
+      <State
+        books={books.filter((book) => book.state.name === state.name)}
+        stateName={state.name}
+      />
+    </Grid.Column>
   ));
 
   return (
     <>
-      <List horizontal>
-        {bookStates}
-      </List>
+      <Grid columns={5}>
+        <Grid.Row>
+          {bookStates}
+        </Grid.Row>
+      </Grid>
     </>
   );
 };
