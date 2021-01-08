@@ -1,7 +1,15 @@
 import React from 'react';
 
-const BookItem: React.FC<{name: string}> = ({ name }) => (
-  <p>{name}</p>
+export type bookState = {
+  id: number;
+  name: string;
+};
+
+const BookItem: React.FC<{name: string, state: bookState}> = ({ name, state }) => (
+  <>
+    <p>{name}</p>
+    <p>{state}</p>
+  </>
 );
 
 export default BookItem;

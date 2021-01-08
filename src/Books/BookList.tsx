@@ -1,9 +1,10 @@
 import React from 'react';
-import BookItem from './BookItem';
+import BookItem, { bookState } from './BookItem';
 
 export type bookList = {
   id: number;
   name: string;
+  state: bookState;
 };
 
 type Props = {
@@ -11,7 +12,9 @@ type Props = {
 };
 
 const BookList: React.FC<Props> = ({ itemList }) => {
-  const items = itemList.map((book) => <BookItem name={book.name} key={book.id} />);
+  const items = itemList.map(
+    (book) => <BookItem name={book.name} key={book.id} state={book.state} />,
+  );
 
   return (
     <>
