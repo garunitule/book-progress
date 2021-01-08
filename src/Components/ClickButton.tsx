@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from 'semantic-ui-react';
 
 type Props = {
   text: string,
@@ -6,11 +7,9 @@ type Props = {
 };
 
 const ClickButton: React.FC<Props> = ({ text, handleOnClick }) => (
-  <>
-    <button type="button" onClick={() => handleOnClick()}>
-      {text}
-    </button>
-  </>
+  <Button onClick={() => handleOnClick()}>
+    {text}
+  </Button>
 );
 
 export default ClickButton;

@@ -20,13 +20,11 @@ const StateList: React.FC<Props> = ({ books, states }) => {
   ));
 
   return (
-    <>
-      <Grid columns={5}>
-        <Grid.Row>
-          {bookStates}
-        </Grid.Row>
-      </Grid>
-    </>
+    <Grid columns={5}>
+      <Grid.Row>
+        {bookStates}
+      </Grid.Row>
+    </Grid>
   );
 };
 
