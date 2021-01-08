@@ -1,4 +1,5 @@
 import React from 'react';
+import { Input } from 'semantic-ui-react';
 
 type Props = {
   name: string;
@@ -7,8 +8,12 @@ type Props = {
 
 const InputText: React.FC<Props> = ({ name, handleOnChange }) => (
   <>
-    Name:
-    <input type="text" value={name} onChange={(e) => handleOnChange(e.target.value)} />
+    本の名前:
+    <Input
+      value={name}
+      onChange={(e) => handleOnChange(e.target.value)}
+      placeholder="本を追加しましょう！"
+    />
   </>
 );
 
