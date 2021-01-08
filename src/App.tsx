@@ -67,11 +67,13 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
-      <InputText
-        name={name}
-        handleOnChange={handleOnChange}
-      />
-      <ClickButton text="保存" handleOnClick={handleOnClick} />
+      <div>
+        <InputText
+          name={name}
+          handleOnChange={handleOnChange}
+        />
+        <ClickButton text="保存" handleOnClick={handleOnClick} />
+      </div>
       <StateList books={books} states={states} />
     </div>
   );
