@@ -115,8 +115,11 @@ const App: React.FC = () => {
           name={name}
           handleOnChange={handleOnChange}
         />
-        <Button onClick={() => handleOnClick()}>
-          保存
+        <Button
+          primary
+          onClick={() => handleOnClick()}
+        >
+          追加
         </Button>
       </div>
       <StateList
