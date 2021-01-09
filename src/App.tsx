@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
+import { Button } from 'semantic-ui-react';
 import './App.css';
-import ClickButton from './Components/ClickButton';
 import { bookList } from './BookStates/Types/BookList';
 import { bookState } from './BookStates/Types/BookState';
 import InputText from './Components/InputText';
@@ -115,7 +115,9 @@ const App: React.FC = () => {
           name={name}
           handleOnChange={handleOnChange}
         />
-        <ClickButton text="保存" handleOnClick={handleOnClick} />
+        <Button onClick={() => handleOnClick()}>
+          保存
+        </Button>
       </div>
       <StateList
         books={books}
