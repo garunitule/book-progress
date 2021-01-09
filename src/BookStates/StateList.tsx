@@ -11,7 +11,7 @@ type Props = {
 
 const StateList: React.FC<Props> = ({ books, states }) => {
   const bookStates = states.map((state) => (
-    <Grid.Column key={state.name}>
+    <Grid.Column key={state.id}>
       <State
         books={books.filter((book) => book.state.name === state.name)}
         stateName={state.name}
