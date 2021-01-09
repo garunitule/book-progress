@@ -12,7 +12,10 @@ const StateList: React.FC<Props> = ({ books, stateName }) => (
     <Menu.Item className="header">{stateName}</Menu.Item>
     {
       books.map((book) => (
-        <Menu.Item key={book.id}>
+        <Menu.Item
+          key={book.id}
+          draggable="true"
+        >
           {book.name}
           の読書進捗は「
           {book.state.name}
