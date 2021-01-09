@@ -24,6 +24,7 @@ const StateList: React.FC<Props> = ({
         stateName={state.name}
         forwardBookState={forwardBookState}
         backwardBookState={backwardBookState}
+        states={states}
       />
     </Grid.Column>
   ));
