@@ -7,14 +7,23 @@ import { bookState } from '../Books/BookItem';
 type Props = {
   books: bookList[];
   states: bookState[];
+  forwardBookState: (id: number) => void;
+  backwardBookState: (id: number) => void;
 };
 
-const StateList: React.FC<Props> = ({ books, states }) => {
+const StateList: React.FC<Props> = ({
+  books,
+  states,
+  forwardBookState,
+  backwardBookState,
+}) => {
   const bookStates = states.map((state) => (
     <Grid.Column key={state.id}>
       <State
         books={books.filter((book) => book.state.name === state.name)}
         stateName={state.name}
+        forwardBookState={forwardBookState}
+        backwardBookState={backwardBookState}
       />
     </Grid.Column>
   ));

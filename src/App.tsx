@@ -70,6 +70,44 @@ const App: React.FC = () => {
     );
   };
 
+  const forwardBookState = (id: number): void => {
+    setBooks(books.map((book) => {
+      if (book.id !== id) {
+        return book;
+      }
+
+      return {
+        id: book.id,
+        name: book.name,
+        state: {
+          id: book.state.id + 1,
+          name: states.find(
+            (state) => state.id === book.state.id + 1,
+          )?.name ?? initState.name,
+        },
+      };
+    }));
+  };
+
+  const backwardBookState = (id: number): void => {
+    setBooks(books.map((book) => {
+      if (book.id !== id) {
+        return book;
+      }
+
+      return {
+        id: book.id,
+        name: book.name,
+        state: {
+          id: book.state.id - 1,
+          name: states.find(
+            (state) => state.id === book.state.id - 1,
+          )?.name ?? initState.name,
+        },
+      };
+    }));
+  };
+
   return (
     <div className="App">
       <div>
@@ -79,7 +117,12 @@ const App: React.FC = () => {
         />
         <ClickButton text="保存" handleOnClick={handleOnClick} />
       </div>
-      <StateList books={books} states={states} />
+      <StateList
+        books={books}
+        states={states}
+        forwardBookState={forwardBookState}
+        backwardBookState={backwardBookState}
+      />
     </div>
   );
 };
