@@ -21,7 +21,6 @@ const StateList: React.FC<Props> = ({
       books.map((book) => (
         <Menu.Item
           key={book.id}
-          draggable="true"
         >
           <p>
             {book.name}
