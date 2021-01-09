@@ -25,9 +25,6 @@ const StateList: React.FC<Props> = ({
         >
           <p>
             {book.name}
-            の読書進捗は「
-            {book.state.name}
-            」です
           </p>
           <Button onClick={() => backwardBookState(book.id)}>
             戻す
