@@ -26,10 +26,18 @@ const StateList: React.FC<Props> = ({
           <p>
             {book.name}
           </p>
-          <Button onClick={() => backwardBookState(book.id)}>
+          <Button
+            basic
+            color="red"
+            onClick={() => backwardBookState(book.id)}
+          >
             戻す
           </Button>
-          <Button onClick={() => forwardBookState(book.id)}>
+          <Button
+            basic
+            color="blue"
+            onClick={() => forwardBookState(book.id)}
+          >
             進める
           </Button>
         </Menu.Item>
