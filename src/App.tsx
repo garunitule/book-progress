@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button } from 'semantic-ui-react';
+import { Button, Message } from 'semantic-ui-react';
 import './App.css';
 import { bookList } from './BookStates/Types/BookList';
 import { bookState } from './BookStates/Types/BookState';
@@ -110,18 +110,23 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
-      <div>
-        <InputText
-          name={name}
-          handleOnChange={handleOnChange}
-        />
-        <Button
-          primary
-          onClick={() => handleOnClick()}
-        >
-          追加
-        </Button>
-      </div>
+      <Message
+        header="読みたい本を追加しましょう！"
+        content={(
+          <>
+            <InputText
+              name={name}
+              handleOnChange={handleOnChange}
+            />
+            <Button
+              primary
+              onClick={() => handleOnClick()}
+            >
+              追加
+            </Button>
+          </>
+        )}
+      />
       <StateList
         books={books}
         states={states}

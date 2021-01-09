@@ -7,14 +7,11 @@ type Props = {
 };
 
 const InputText: React.FC<Props> = ({ name, handleOnChange }) => (
-  <>
-    本の名前:
-    <Input
-      value={name}
-      onChange={(e) => handleOnChange(e.target.value)}
-      placeholder="本を追加しましょう！"
-    />
-  </>
+  <Input
+    value={name}
+    onChange={(e) => handleOnChange(e.target.value)}
+    placeholder="本を追加しましょう！"
+  />
 );
 
 export default InputText;
