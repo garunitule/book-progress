@@ -1,8 +1,8 @@
 import React from 'react';
 import { Grid } from 'semantic-ui-react';
 import State from './State';
-import { bookList } from './BookList';
-import { bookState } from './BookState';
+import { bookList } from './Types/BookList';
+import { bookState } from './Types/BookState';
 
 type Props = {
   books: bookList[];

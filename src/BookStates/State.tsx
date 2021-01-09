@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Menu } from 'semantic-ui-react';
-import { bookList } from './BookList';
+import { bookList } from './Types/BookList';
 
 type Props = {
   books: bookList[];

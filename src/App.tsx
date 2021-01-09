@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './App.css';
 import ClickButton from './Components/ClickButton';
-import { bookList } from './BookStates/BookList';
-import { bookState } from './BookStates/BookState';
+import { bookList } from './BookStates/Types/BookList';
+import { bookState } from './BookStates/Types/BookState';
 import InputText from './Components/InputText';
 import StateList from './BookStates/StateList';
 
